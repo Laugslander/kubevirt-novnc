@@ -14,6 +14,9 @@ Since 2024-01-05, the following enhancements have been made to the original fork
 
 # Deployment Example
 
+> [!NOTE]
+> The software in this repository is provided "as is" with absolutely no guarantees or warranties. [MIT License](LICENSE.md) applies.
+
 ## Prerequisites
 
 This deployment example assumes the following:
@@ -60,55 +63,3 @@ Pre-built container images are available here: https://github.com/users/scog/pac
 ## Example Screenshot
 
 ![screenshot](https://raw.githubusercontent.com/scog/kubevirt-novnc/main/example.png)
-
-## MIT License
-
-> [!WARNING]
-> The software in this repository is provided "as is" with absolutely no guarantees or warranties. MIT License below applies.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-# virtVNC
-
-[noVNC](https://github.com/novnc/noVNC) for [kubevirt](https://github.com/kubevirt/kubevirt)
-
-## Deploy
-
-```bash
-kubectl apply -f https://github.com/wavezhang/virtVNC/raw/master/k8s/virtvnc.yaml
-```
-
-## Usage
-
-1. Get node port of ```virtvnc``` service
-```bash
-kubectl get svc -n kubevirt virtvnc
-```
-2. Visit following url in browser
-```
-http://NODEIP:NODEPORT/
-```
-
-If you want manager virtual machines in other namespace, you can specify namespace using query param namespace like following:
-```
-http://NODEIP:NODEPORT/?namespace=test
-```
-![virtVNC](https://github.com/wavezhang/virtVNC/blob/master/virtvnc.gif?raw=true)
