@@ -125,7 +125,7 @@ spec:
         effect: "NoSchedule"
       containers:
       - name: kv-novnc
-        image: ghcr.io/scog/kv-novnc:latest
+        image: ghcr.io/scog/kubevirt-novnc:latest
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
