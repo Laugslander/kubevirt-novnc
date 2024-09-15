@@ -6,7 +6,7 @@
 Since 2024-01-05, the following enhancements have been made to the original fork:
 
   - Bumped [`bitnami/kubectl`](https://hub.docker.com/r/bitnami/kubectl) base image to `1.29.0`
-  - Bumped [`noVNC`](https://github.com/novnc/noVNC/tree/master/app) to `1.4.0` <small>(contents in [`/app`](app))</small>
+  - Bumped [`noVNC`](https://github.com/novnc/noVNC/tree/master/app) to `1.5.0` <small>(contents in [`/static/app`](static/app))</small>
   - Changed Service `NodePort` to `ClusterIP` ... thus intentionally removing access to `8001/tcp` from outside the k8s cluster
   - Added IngressRoute with Basic HTTP-Auth using [Traefik MiddleWares](https://doc.traefik.io/traefik/middlewares/http/basicauth/)
   - Added basic CSS styling using 
